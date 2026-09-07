@@ -57,3 +57,38 @@ After:
 - Loops and conditional logic
 - Error handling
 - Working with the Python standard library
+
+
+## 🔄 Undo / Recovery Utility
+
+The project includes `undo_file_organizer.py`, a recovery utility designed to reverse the file organization performed by `file_organizer.py`.
+
+### What it does
+
+The undo script:
+
+* Scans the category folders created by the organizer
+* Moves organized files back to the original `Downloads` folder
+* Helps restore files without manually moving them one by one
+* Prevents accidental filename overwrites by creating a unique filename when necessary
+
+### Usage
+
+Run the following command from the project folder:
+
+```bash
+python undo_file_organizer.py
+```
+
+The script will display the number of files successfully restored.
+
+### Example
+
+```text
+Undo completed!
+Files restored: 168
+```
+
+### ⚠️ Important
+
+The undo utility is intended to reverse file organization performed by this project. Always review the target folder and understand what files will be moved before running automation scripts that modify your filesystem.
